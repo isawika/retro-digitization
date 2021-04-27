@@ -1,6 +1,6 @@
 # How to Digitize a Historical Dictionary
 
-### Step 1: Image Capture
+## 1. Image Capture
 
 Convert the dictionary into a PDF image document by scanning it. You can do this non-destructively or destructively. 
 

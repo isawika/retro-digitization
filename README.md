@@ -1,7 +1,7 @@
 # How to Digitize a Historical Dictionary
 
 
-Retro-digitization is the process of converting a paper-based historical dictionary into an electronic format suitable for publishing online or for sharing as a digital resource. In this tutorial, you will learn the workflow we developed to digitize a 1953 bilingual dictionary. For details, see our paper *"Using Open-Source Tools to Digitize Lexical Resources for Low-Resource Languages"* (upcoming).
+Retro-digitization is the process of converting a paper-based historical publication into an electronic format suitable for publishing online or for sharing as a digital resource. In this tutorial, you will learn the workflow we developed to digitize a 1953 bilingual dictionary. For details, see our paper *"Using Open-Source Tools to Digitize Lexical Resources for Low-Resource Languages"* (upcoming).
 
 We designed the workflow to enable even those with modest budgets to conduct their own retro-digitization projects. In doing so, we hope to encourage more communities, especially speakers of minority and indigenous languages, to build e-dictionaries and other digital lexical resources for their mother-tongue language.
 
@@ -23,11 +23,8 @@ _Example dictionary hosted in Lexonomy_
 
 ## The Workflow
 
-- [Step 1:](./Step1-ImageCapture.md) Image Capture
-- Step 2: Text Capture
-  - Prepare the OCR training data
-  - Train the OCR engine 
-  - Transcribe the dictionary pages
+- [Step 1](./Step1-ImageCapture.md): Image Capture
+- [Step 2](./Step2-TextCapture.md): Text Capture
 - Step 3: Proofread the transcriptions
 - Step 4: Convert to XML
   - Post-edit: remove typesetting artifacts
