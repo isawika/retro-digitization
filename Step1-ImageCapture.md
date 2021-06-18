@@ -13,6 +13,8 @@ If the dictionary is rare or valuable-- often the case for historical documents,
     <figcaption><i>Internet Archive book scanner<br>(Credit: <a href="https://commons.wikimedia.org/w/index.php?curid=3606255">Dvortygirl</a> - Own work, CC BY-SA 4.0)</i></figcaption>
 </figure>
 
+<br/>
+
 For our project, we used [Bound Book Scanning](https://boundbookscanning.com/) (New York) and were happy with the results. Before you approve the job and have your book returned, make sure to check that all pages were scanned because these machines may occasionally skip pages. This happened to us and we had to ask for the missed pages to be scanned.
 
 Alternatively if you have the time and equipment, you can scan the book yourself.

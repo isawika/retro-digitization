@@ -2,13 +2,13 @@
 
 ## 2. Text Capture
 
-Now that you have a PDF document, you will convert its pages to plain text. However it's common for historical dictionaries to be typeset in obsolete fonts or use special character symbols that are unknown to today's OCR software. If you use an OCR as-is, you will likely get lots of transcription errors that are too time-consuming and costly to correct. Thus it is better to first train the OCR to accurately recognize the dictionary's distinct typography. Fortunately, some OCR tools such as [Tesseract](https://github.com/tesseract-ocr/tesseract) are trainable and will serve our purpose well.
+Now that you have a PDF version of the dictionary, you will convert its pages into plain text. However it's common for historical dictionaries to be typeset in obsolete fonts or use special character symbols that are unknown to today's OCR software. If you use an OCR as-is, you will likely get lots of transcription errors that are too time-consuming and costly to correct. Thus it is better to first train the OCR to accurately recognize the dictionary's distinct typography. Fortunately, OCR tools such as [Tesseract](https://github.com/tesseract-ocr/tesseract) are trainable and will serve our purpose well.
 
 To train the OCR, you:
 
  - select several pages (or more precisely, text regions in the pages) from the dictionary that provide good examples of special characters and/or fonts you want the OCR to recognize
- - create accurate transcriptions for the text regions you selected
- - feed the set of text + transcription pairs to the training tool
+ - manually create accurate transcriptions for the text regions you selected
+ - feed the set of text + transcription pairs into Tesseract
  - wait until the training is complete
 
 Let's begin!
