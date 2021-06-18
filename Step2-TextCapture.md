@@ -2,15 +2,24 @@
 
 ## 2. Text Capture
 
-Once you have a PDF version of the document, you would use an Optical Character Recognition (OCR) software to convert it into plain text. We recommend using [Tesseract](https://github.com/tesseract-ocr/tesseract) because besides being open-source with a large user community (whom you can ask for help), it supports over XXX languages so there's a fair chance it can readily convert your document. More importantly, you can train Tesseract if none of the pre-built language models are good enough. You will do that next.
+Now that you have a PDF document, you will convert its pages to plain text. However it's common for historical dictionaries to be typeset in obsolete fonts or use special character symbols that are unknown to today's OCR software. If you use an OCR as-is, you will likely get lots of transcription errors that are too time-consuming and costly to correct. Thus it is better to first train the OCR to accurately recognize the dictionary's distinct typography. Fortunately, some OCR tools such as [Tesseract](https://github.com/tesseract-ocr/tesseract) are trainable and will serve our purpose well.
+
+To train the OCR, you:
+
+ - select several pages (or more precisely, text regions in the pages) from the dictionary that provide good examples of special characters and/or fonts you want the OCR to recognize
+ - create accurate transcriptions for the text regions you selected
+ - feed the set of text + transcription pairs to the training tool
+ - wait until the training is complete
+
+Let's begin!
 
 ---
-__Prerequisite:__ _Install Tesseract_
+__Prerequisite 1:__ &nbsp;_Install Tesseract_
 
-You need to compile the Tesseract source code in order to use the training tools.
+You need to compile the Tesseract source code in order to use the training tools. The pre-built binaries unfortunately do not include them.
 
-- [Download](https://github.com/tesseract-ocr/tesseract/releases) and uncompress the source of the latest release (e.g., "v4.1.1")
-- Rename the folder 
+- [Download](https://github.com/tesseract-ocr/tesseract/releases) and uncompress the source of the latest release (e.g., "v4.1.1") in your home folder
+- Rename the folder (for convenience)
 ```
 $ mv tesseract-4.1.1 tesseract
 ```
@@ -18,20 +27,39 @@ $ mv tesseract-4.1.1 tesseract
 - Run the following commands from a console. The programs will be installed in the folder _/usr/local/bin_
 
 ```
-$ cd tesseract
+$ cd ~/tesseract
 $ ./configure
 $ make
 $ make training
 $ sudo make install training-install
 ```
 
-NOTE:  If the _./configure_ command gives "undefined M4 macro" errors, run the command "_autoreconf --install_" first and then run "_./configure_" again.
+> NOTE: If the _./configure_ command gives "undefined M4 macro" errors, run "_autoreconf --install_" first and then run "_./configure_" again.
+
+__Prerequisite 2:__ &nbsp;_Install PDFtk and ImageMagick_
+
+_PDFtk_ is a handy tool for splitting/joining/rotating PDF files while _ImageMagick_ converts PDF files into TIFF and provides lots of image processing features. 
+
+```
+$ sudo apt install pdftk-java
+$ sudo apt install imagemagick
+```
+
+Edit the ImageMagick policy _/etc/ImageMagick-6/policy.xml_ to allow converting PDF files. Look for a line like below and set value of __rights__ to "read | write":
+
+`<policy domain="coder" rights="read | write" pattern="PDF" />`
 
 ---
 
-### 2.1 Split the PDF document into separate pages
+### 2.1 Split the PDF document and convert the pages to TIFF images
 
-Split the pages so we use them individually and convert them to TIFF image files. (Tesseract doesn't read PDF pages.) 
+```
+$ cd ~/retro-digitization/tutorial
+$ pdftk ConklinSample.pdf burst output train-%02d.pdf
+$ ../pdf2tiff.sh train*.pdf
+```
+
+You should see 3 TIFF files named _train-01.tif, train-02.tif, train-03.tif_
 
 ### 2.1 Prepare the OCR training data
 
@@ -52,3 +80,8 @@ complexity
 novel characters
 book layout
 dictionary microstructure
+
+
+<br/>
+
+[Step 3](./Step3-Proofread.md) - Proofread the transcriptions
