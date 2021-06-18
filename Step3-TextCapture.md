@@ -1,6 +1,6 @@
 # How to Digitize a Historical Dictionary
 
-## 2. Text Capture
+## 3. Text Capture
 
 Now that you have a PDF version of the dictionary, you will convert its pages into plain text. However it's common for historical dictionaries to be typeset in obsolete fonts or use special character symbols that are unknown to today's OCR software. If you use an OCR as-is, you will likely get lots of transcription errors that are too time-consuming and costly to correct. Thus it is better to first train the OCR to accurately recognize the dictionary's distinct typography. Fortunately, OCR tools such as [Tesseract](https://github.com/tesseract-ocr/tesseract) are trainable and will serve our purpose well.
 
@@ -84,4 +84,4 @@ dictionary microstructure
 
 <br/>
 
-[Step 3](./Step3-Proofread.md) - Proofread the transcriptions
+[Step 3.1](./Step3.1-Proofread.md) - Proofread the transcriptions

@@ -13,7 +13,7 @@ You will use sample pages from Harold Conklin's 1953 Hanunoo-English dictionary.
 
 <br/>
 
-You will train an OCR engine to recognize the special character 'ŋ' since no existing engine can (the glottal stop symbol will be handled differently). You will also format the OCR-ed pages into XML then load/edit/display them in a locally-installed [Lexonomy](https://www.lexonomy.eu/) dictionary server. How cool is that? :-)
+You will train the open-source Tesseract OCR engine to recognize the special character 'ŋ' since no existing engine can (the glottal stop symbol will be handled differently, and Tesseract has a language model that recognizes the vowels with diacritical marks). You will also format the OCR-ed pages into XML then load/edit/display them in a locally-installed [Lexonomy](https://www.lexonomy.eu/) dictionary server. How cool is that? :-)
 
 ![Example Lexonomy dictionary](./images/lexonomy-entry.png)
 _Example dictionary hosted in Lexonomy_
@@ -36,9 +36,14 @@ $ cd retro-digitization
 
 ## The Workflow
 
-- [Step 1](./Step1-ImageCapture.md): Image Capture
-- [Step 2](./Step2-TextCapture.md): Text Capture
-- [Step 3](./Step3-Proofread.md): Proofread the transcriptions
-- [Step 4](./Step4-ConvertToXml.md): Convert to XML
+We follow the technical steps outlined in the [DariahTeach project](https://teach.dariah.eu/mod/page/view.php?id=343), highlighted as blue-ish boxes below:
+
+![workflow diagram showing the 5 steps](./images/workflow.png)
+
+- Step 1: Planning
+- [Step 2](./Step2-ImageCapture.md): Image Capture
+- [Step 3](./Step3-TextCapture.md): Text Capture
+  - [3.1](./Step3.1-Proofread.md): Proofread the transcriptions
+- [Step 4](./Step4-DataModeling.md): Data Modeling & Enrichment
 - [Step 5](./Step5-Publish.md): Publish
 

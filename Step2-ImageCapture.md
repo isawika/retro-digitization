@@ -1,6 +1,6 @@
 # How to Digitize a Historical Dictionary
 
-## 1. Image Capture
+## 2. Image Capture
 
 Convert the dictionary into a PDF image document by scanning it. You can do this non-destructively or destructively. 
 
@@ -8,12 +8,12 @@ __Non-destructive Scanning__
 
 If the dictionary is rare or valuable-- often the case for historical documents, non-destructive is your only option. Find a book scanning or document archival business who can do this for you. These firms use special hardware that holds the book with minimal stress on the spine while it automatically flips and scans the pages, a plus if you are concerned about preserving your dictionary. Below is an example of these types of specialized book scanners.
 
-<figure>
-    <img src="images/Internet_Archive_book_scanner_1.jpg" alt="book scanner used by Internet Archive team" width="250"/>
-    <figcaption><i>Internet Archive book scanner<br>(Credit: <a href="https://commons.wikimedia.org/w/index.php?curid=3606255">Dvortygirl</a> - Own work, CC BY-SA 4.0)</i></figcaption>
-</figure>
-
-<br/>
+<p>
+    <figure>
+        <img src="images/Internet_Archive_book_scanner_1.jpg" alt="book scanner used by Internet Archive team" width="250"/>
+        <figcaption><i>Internet Archive book scanner<br>(Credit: <a href="https://commons.wikimedia.org/w/index.php?curid=3606255">Dvortygirl</a> - Own work, CC BY-SA 4.0)</i></figcaption>
+    </figure>
+</p>
 
 For our project, we used [Bound Book Scanning](https://boundbookscanning.com/) (New York) and were happy with the results. Before you approve the job and have your book returned, make sure to check that all pages were scanned because these machines may occasionally skip pages. This happened to us and we had to ask for the missed pages to be scanned.
 
@@ -27,4 +27,4 @@ Consider destructive scanning if you can obtain the dictionary inexpensively. Th
 
 <br/>
 
-[Step 2](./Step2-TextCapture.md) - Text Capture
+[Step 3](./Step3-TextCapture.md) - Text Capture

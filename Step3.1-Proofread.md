@@ -1,6 +1,6 @@
 # How to Digitize a Historical Dictionary
 
-## Step 3: Proofread the Transcriptions
+## Step 3.1: Proofread the Transcriptions
 
 This step is very mechanical. For each OCR-ed page, you:
 
@@ -27,4 +27,4 @@ For your own project, you will need to proofread the entire dictionary so plan a
 
 <br/>
 
-[Step 4](./Step4-ConvertToXml.md) - Convert to XML
+[Step 4](./Step4-DataModeling.md) - Data Modeling & Enrichment
