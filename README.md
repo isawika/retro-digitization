@@ -7,13 +7,13 @@ We designed the workflow to enable even those with modest budgets to conduct the
 
 ## What You'll Do
 
-You will use sample pages from Harold Conklin's 1953 Hanunoo-English dictionary. Hanunoo (IPA: "hanunuʔɔ") is an indigenous language spoken by ~25,000 Hanunoo Mangyan people in the Philippines. Although they have a native writing system called [Surat Mangyan](https://en.wikipedia.org/wiki/Hanunuo_script), the dictionary itself had Hanunoo words printed in Roman letters but their pronounciations were denoted with non-Roman letters. These include 5 vowels with diacritical marks (á é í ó ú), the eng character 'ŋ' and the glottal stop 'ʔ' symbol. Here are two sample entries in the dictionary:
+You will use sample pages from Harold Conklin's 1953 Hanunoo-English dictionary. Hanunoo (IPA: "hanunuʔɔ") is an indigenous language spoken by ~25,000 Hanunoo Mangyan people in the Philippines. Although they have a native writing system called [Surat Mangyan](https://en.wikipedia.org/wiki/Hanunuo_script), the dictionary itself had Hanunoo words printed in Roman letters but their pronounciations were denoted with non-Roman letters. These include 5 vowels with diacritical marks (á é í ó ú), the eng character 'ŋ' and the glottal stop 'ʔ' symbol. Here are two sample entries in the dictionary where you can see them used.
 
 <center><img src="./images/conklin-sample.png" alt="Two sample entries from the Conklin dictionary for the headwords 'agusbakyang and 'Agustu'." width="500"/></center>
 
 <br/>
 
-You will train the open-source Tesseract OCR engine to recognize the special character 'ŋ' since no existing engine can (the glottal stop symbol will be handled differently, and Tesseract has a language model that recognizes the vowels with diacritical marks). You will also format the OCR-ed pages into XML then load/edit/display them in a locally-installed [Lexonomy](https://www.lexonomy.eu/) dictionary server. How cool is that? :-)
+You will train the open-source Tesseract OCR engine to recognize the special character 'ŋ' since no existing engine can (the glottal stop symbol will be handled differently, and Tesseract already has a language model that recognizes the vowels with diacritical marks). You will also format the OCR-ed pages into XML then load/edit/display them in a locally-installed [Lexonomy](https://www.lexonomy.eu/) dictionary server. How cool is that? :-)
 
 ![Example Lexonomy dictionary](./images/lexonomy-entry.png)
 _Example dictionary hosted in Lexonomy_
@@ -25,9 +25,8 @@ _Example dictionary hosted in Lexonomy_
 3. Admin privilege to install software
 4. You know how to run commands in a console
 
-To follow along, first make sure you have copied this Git project into your home folder:
+To follow along, clone the Git project into your working directory.
 ```
-$ cd ~
 $ git clone https://github.com/isawika/retro-digitization.git
 $ cd retro-digitization
 ```
@@ -43,7 +42,10 @@ We follow the technical steps outlined in the [DariahTeach project](https://teac
 - Step 1: Planning
 - [Step 2](./Step2-ImageCapture.md): Image Capture
 - [Step 3](./Step3-TextCapture.md): Text Capture
-  - [3.1](./Step3.1-Proofread.md): Proofread the transcriptions
+  - [3.1](./Step3.1-PrepareTraining.md) - Prepare the Training Data
+  - [3.2](./Step3.2-Finetune.md) - Finetune Tesseract (train the OCR language model)
+  - [3.3](./Step3.3-Transcribe.md) - Transcribe the dictionary pages with the trained model
+  - [3.4](./Step3.4-Proofread.md) - Proofread the pages
 - [Step 4](./Step4-DataModeling.md): Data Modeling & Enrichment
 - [Step 5](./Step5-Publish.md): Publish
 
