@@ -4,15 +4,15 @@
 
 In this step, you will convert the scanned dictionary pages into plain text. However there's a complication. Virtually all historical dictionaries are typeset in obsolete fonts or use special character symbols that are unknown to today's OCR software. If you use an OCR as-is, you will get lots of transcription errors that are too time-consuming and costly to correct manually. Thus it is better to first train the OCR so that it recognizes the dictionary's distinct typography before transcribing all the pages. Fortunately, OCR software such as [Tesseract](https://github.com/tesseract-ocr/tesseract) are trainable and will serve our purpose well.
 
-Tesseract uses Deep Learning technology ([video](https://www.youtube.com/watch?v=6M5VXKLf4D4)) to recognize text from images. As of Version 4.0, it [supports](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html) over 150 languages and scripts. In order to train it to recognize novel characters/symbols, you will train it via "fine tuning". This means instead of making Tesseract learn the entire orthography of a language from scratch, you will start from one of its pre-trained language models that does the best job of recognizing your target orthography and tweak that model to learn just the novel symbols. What's neat about this approach it that it's faster to train the model and requires much less training data.
+Tesseract uses Deep Learning technology ([video](https://www.youtube.com/watch?v=6M5VXKLf4D4)) to recognize text from images. As of Version 4.0, it [supports](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html) over 150 languages and scripts. In order to train it to recognize novel characters/symbols, you will train it via [fine tuning](https://tesseract-ocr.github.io/tessdoc/tess4/TrainingTesseract-4.00.html#fine-tuning-for--a-few-characters). So instead of making Tesseract learn the entire orthography of a language from scratch, you start with one of its pre-trained language models that does the best job of recognizing your target orthography, then tweak that model to learn the novel symbols. Using this approach, training Tesseract is faster and requires much less training data.
 
 Below is a visual of what you will do.
 
 ![Text capture sub-steps along with their input and output files](./images/text-capture-step.png)
 
-There are three major substeps:
+Text Capture has 3 substeps:
 
-- __Fine-tune__ - train the OCR to recognize the novel characters/symbols in the dictionary
+- __Fine-tune__ - train the OCR to recognize the new characters/symbols in the dictionary
 - __Transcribe__ - use the trained model to convert the pages into text
 - __Post-edit__ - correct any residual OCR errors 
 
