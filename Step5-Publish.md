@@ -1,3 +1,5 @@
-# How to Digitize a Historical Dictionary
+# How to Retro-Digitize a Historical Dictionary
 
 ### Step 5: Publish
+
+(todo)

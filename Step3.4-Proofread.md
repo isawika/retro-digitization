@@ -1,6 +1,6 @@
-# How to Digitize a Historical Dictionary
+# How to Retro-Digitize a Historical Dictionary
 
-## Step 3.1: Proofread the Transcriptions
+## Step 3.4: Proofread the OCR-ed Pages
 
 This step is very mechanical. For each OCR-ed page, you:
 

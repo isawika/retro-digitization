@@ -1,9 +1,8 @@
-# How to Digitize a Historical Dictionary
+# How to Retro-Digitize a Historical Dictionary
 
 ## Step 4: Convert to XML
 
-  - Post-edit: remove typesetting artifacts
-  - Edit/refine XML fields
+(todo)
 
 
 <br/>

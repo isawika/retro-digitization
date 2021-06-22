@@ -1,4 +1,4 @@
-# How to Digitize a Historical Dictionary
+# How to Retro-Digitize a Historical Dictionary
 
 ## 3. Text Capture
 
