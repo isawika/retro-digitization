@@ -25,7 +25,6 @@ $ cd retro-digitization/tutorial
 $ mkdir tessdata
 $ wget -P ./tessdata https://github.com/tesseract-ocr/tessdata_best/raw/master/spa.traineddata
 $ wget ./tessdata https://github.com/tesseract-ocr/tessdata_best/raw/master/eng.traineddata
-
 ```
 
 OCR the sample pages using the Spanish model.
@@ -47,20 +46,36 @@ You should see 5 OCR-ed pages named sample-01.txt, ..., sample-05.txt
 
 __Optional__
 
-Experiment with the Tagalog and Old Spanish language models. Compare their OCR accuracy against the Spanish model. Move or rename the previously OCR-ed text files before rerunning the __runocr.sh__, otherwise they will be overwritten.
+Download and experiment with the Tagalog and Old Spanish language models. Compare their OCR accuracy against the Spanish model's. 
 
 ```
-# Tagalog has no 'best LSTM' model, so fetch the standard one
+# Tagalog has no 'best LSTM' model, so download the standard one
 $ wget -P ./tessdata https://github.com/tesseract-ocr/tessdata/raw/master/tgl.traineddata
 
 $ wget ./tessdata https://github.com/tesseract-ocr/tessdata_best/raw/master/spa_old.traineddata
 ```
 
+Before rerunning the __runocr.sh__, move or rename the previously OCR-ed text files or else they will be overwritten.
+
 #### 3.1.2 Select the training text
 
 > Note: In our paper, we described using the JTessBox tool to create Box files for training Tesseract. We since learned that this is not needed; we show a simpler way below.  
 
-<br/>
+This substep is more art than science. Your goal is to select a representative sample of the dictionary text from which Tesseract will learn how to recognize the new characters. While it's not possible to give exact instructions, we offer these guidelines:
+
+- Choose entries from different pages in the dictionary. Ideally you want to sample widely and not just from say, the first few pages.
+- Choose text where the special characters occur in a variety of positions (start, middle and end of words)
+- You don't need many examples. Perhaps 25-50 lines for each special character may be enough.
+
+Open the OCR-ed pages of your chosen training text and manually correct the OCR errors. That is, replace the misrecognized characters with the actual special symbols.
+
+Copy the all training text into a single text file, removing any blank lines.
+
+Below is the training text we choose to fine-tune Tesseract to recognize the Hanunoo and English words in Conklin's dictionary. Notice it's only 40 lines long.
+
+- [hanunoo.txt](./tutorial/hanunoo.txt)
+
+We ran a handful of experiments to ultimately come up with this training data. There's nothing special about it; one can find other text in the dictionary that could produce a similar (or even better) performing language model. But we found it was good enough to achieve 98-99% OCR accuracy.
 
 ---
 <br/>
