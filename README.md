@@ -1,5 +1,5 @@
 # How to Retro-Digitize a Historical Dictionary
-
+Contact: Ben Bongalon (ben@isawika.org)
 
 Retro-digitization is the process of converting a paper-based historical publication into an electronic format suitable for publishing online or for sharing as a digital resource. In this tutorial, you will learn the workflow we developed to digitize a 1953 bilingual dictionary. For details, see our paper *"Using Open-Source Tools to Digitize Lexical Resources for Low-Resource Languages"* (upcoming).
 
