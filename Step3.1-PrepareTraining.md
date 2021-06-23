@@ -22,15 +22,15 @@ Download the Spanish and English language models.
 
 ```
 $ cd retro-digitization/tutorial
-$ mkdir tessdata
-$ wget -P ./tessdata https://github.com/tesseract-ocr/tessdata_best/raw/master/spa.traineddata
-$ wget ./tessdata https://github.com/tesseract-ocr/tessdata_best/raw/master/eng.traineddata
+$ cd tesseract/tessdata
+$ wget https://github.com/tesseract-ocr/tessdata_best/raw/master/spa.traineddata
+$ wget https://github.com/tesseract-ocr/tessdata_best/raw/master/eng.traineddata
 ```
 
 OCR the sample pages using the Spanish model.
 
 ```
-$ export TESSDATA_PREFIX=./tessdata
+$ export TESSDATA_PREFIX=./tesseract/tessdata
 $ ../runocr.sh *.tif -l spa
 ```
 
@@ -49,10 +49,12 @@ __Optional__
 Download and experiment with the Tagalog and Old Spanish language models. Compare their OCR accuracy against the Spanish model's. 
 
 ```
-# Tagalog has no 'best LSTM' model, so download the standard one
-$ wget -P ./tessdata https://github.com/tesseract-ocr/tessdata/raw/master/tgl.traineddata
+$ cd retro-digitization/tutorial/tesseract/tessdata
 
-$ wget ./tessdata https://github.com/tesseract-ocr/tessdata_best/raw/master/spa_old.traineddata
+# Tagalog has no 'best LSTM' model, so download the standard one
+$ wget https://github.com/tesseract-ocr/tessdata/raw/master/tgl.traineddata
+
+$ wget https://github.com/tesseract-ocr/tessdata_best/raw/master/spa_old.traineddata
 ```
 
 Before rerunning the __runocr.sh__, move or rename the previously OCR-ed text files or else they will be overwritten.

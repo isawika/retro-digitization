@@ -21,40 +21,75 @@ To help make these concepts clearer, we will use the Hanunoo dictionary as an ex
 Let's begin!
 
 ---
-__Prerequisite 1:__ &nbsp;_Install Tesseract_
 
-You need to compile the Tesseract source code in order to use the training tools. The pre-built binaries unfortunately do not include them.
+<br/>
 
-- [Download](https://github.com/tesseract-ocr/tesseract/releases) and uncompress the source of the latest release (e.g., "v4.1.1") in your home folder
+> Note: The following instructions were distilled from the Tesseract 4.0 [training guide](https://tesseract-ocr.github.io/tessdoc/tess4/TrainingTesseract-4.00.html). See that guide for mode details.
+
+<br/>
+
+__Prerequisite 1:__ &nbsp;_Install the needed fonts_
+
+```
+sudo apt update
+sudo apt install ttf-mscorefonts-installer
+sudo apt install fonts-dejavu
+fc-cache -vf
+```
+
+__Prerequisite 2:__ &nbsp;_Install some required dependencies_
+
+_PDFtk_ is a handy tool for splitting/joining/rotating PDF files while _ImageMagick_ converts PDF files into TIFF and provides lots of image processing features. Leptonica is needed to build Tesseract from source code.
+
+```
+$ sudo apt install pdftk-java
+$ sudo apt install imagemagick
+$ sudo apt install libleptonica-dev
+```
+
+Edit the ImageMagick policy _/etc/ImageMagick-6/policy.xml_ to allow converting PDF files. Look for a line like below and change the value of __rights__ to "read | write":
+
+`<policy domain="coder" rights="read | write" pattern="PDF" />`
+
+__Prerequisite 3:__ &nbsp;_Install Tesseract_
+
+You must compile the Tesseract source code in order to use the training tools. Unfortunately, the Tesseract executables available for download do not include them.
+
+```
+$ cd retro-digitization/tutorial
+```
+
+- [Download](https://github.com/tesseract-ocr/tesseract/releases) the source code of the latest release (e.g., "v4.1.1") and unzip it
 - Rename the folder (for convenience)
 ```
 $ mv tesseract-4.1.1 tesseract
 ```
 
-- Run the following commands from a console. The programs will be installed in the folder _/usr/local/bin_
+- Configure and build Tesseract and its training tools.
+> NOTE: If the _./configure_ file does not exist or gives "undefined M4 macro" errors when you run it, run "_autoreconf --install_" first and then run "_./configure_" again.
 
 ```
 $ cd tesseract
 $ ./configure
 $ make
 $ make training
+```
+
+- Using your favorite text editor, open the file _src/training/language-specific.sh_. Look for the line that starts with "__LATIN_FONTS=__". Comment out the following lines and re-save the file.
+
+    "URW Bookman L Bold" \
+    "URW Bookman L Italic" \
+    "URW Bookman L Bold Italic" \
+    "Century Schoolbook L Bold" \
+    "Century Schoolbook L Italic" \
+    "Century Schoolbook L Bold Italic" \
+    "Century Schoolbook L Medium" \
+
+__Optional:__ &nbsp;Install Tesseract and the training tools so you run them without giving the full path. They will be installed in _/usr/local/bin_
+
+```
 $ sudo make install training-install
 ```
-
-> NOTE: If the _./configure_ command gives "undefined M4 macro" errors, run "_autoreconf --install_" first and then run "_./configure_" again.
-
-__Prerequisite 2:__ &nbsp;_Install PDFtk and ImageMagick_
-
-_PDFtk_ is a handy tool for splitting/joining/rotating PDF files while _ImageMagick_ converts PDF files into TIFF and provides lots of image processing features. 
-
-```
-$ sudo apt install pdftk-java
-$ sudo apt install imagemagick
-```
-
-Edit the ImageMagick policy _/etc/ImageMagick-6/policy.xml_ to allow converting PDF files. Look for a line like below and change the value of __rights__ to "read | write":
-
-`<policy domain="coder" rights="read | write" pattern="PDF" />`
 
 ---
 

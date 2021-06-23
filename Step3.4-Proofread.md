@@ -8,20 +8,24 @@ This step is very mechanical. For each OCR-ed page, you:
 - Compare the page's content against the corresponding source PDF and fix any OCR mistakes
 - Save the corrected text file
 
-> __Exercise:__ &nbsp;Proofread the following.
+> __Exercise:__ &nbsp;Proofread the following (as much as you'd like :-)
 >
 > | OCR-ed Page | Original PDF |
 > | --- | ----------- |
-> | page-00xx-OCR.txt | page-00xx.pdf |
-> | page-00xx-OCR.txt | page-00xx.pdf |
-> | page-00xx-OCR.txt | page-00xx.pdf |
+> | trained-01.txt | sample-01.pdf |
+> | trained-02.txt | sample-02.pdf |
+> | trained-03.txt | sample-03.pdf |
+> | trained-04.txt | sample-04.pdf |
+> | trained-05.txt | sample-05.pdf |
 &nbsp;
 
 Check your work by comparing them with our proofread pages below. Use a file comparison tool such as [Meld](https://meldmerge.org/) (runs on Ubuntu, Mac OS & Windows) to do a "visual diff".
 
-- page-00xx-REF.txt
-- page-00xx-REF.txt
-- page-00xx-REF.txt
+- sample-01-REF.txt
+- sample-02-REF.txt
+- sample-03-REF.txt
+- sample-04-REF.txt
+- sample-05-REF.txt
 
 For your own project, you will need to proofread the entire dictionary so plan accordingly.
 
