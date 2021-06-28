@@ -19,4 +19,4 @@ You should see 5 OCR-ed text files: _trained-01.txt, ... trained-05.txt_
 
 <br/>
 
-[Step 4](./Step3.4-Proofread.md) - Proofread
+[Step 3.4](./Step3.4-Proofread.md) - Proofread
