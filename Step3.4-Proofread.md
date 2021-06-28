@@ -19,13 +19,13 @@ This step is very mechanical. For each OCR-ed page, you:
 > | trained-05.txt | sample-05.pdf |
 &nbsp;
 
-Check your work by comparing them with our proofread pages below (located in _tutorial/CorrectedPages_). Use a file comparison tool such as [Meld](https://meldmerge.org/) (runs on Ubuntu, Mac OS & Windows) to do a "visual diff".
+Check your work by comparing them with our proofread pages below (located in _tutorial/Examples_). Use a file comparison tool such as [Meld](https://meldmerge.org/) (runs on Ubuntu, Mac OS & Windows) to do a "visual diff".
 
-- [sample-01-REF.txt](./tutorial/CorrectedPages/sample-01-REF.txt)
-- [sample-02-REF.txt](./tutorial/CorrectedPages/sample-02-REF.txt)
-- [sample-03-REF.txt](./tutorial/CorrectedPages/sample-03-REF.txt)
-- [sample-04-REF.txt](./tutorial/CorrectedPages/sample-04-REF.txt)
-- [sample-05-REF.txt](./tutorial/CorrectedPages/sample-05-REF.txt)
+- [sample-01.txt](./tutorial/Examples/sample-01.txt)
+- [sample-02.txt](./tutorial/Examples/sample-02.txt)
+- [sample-03.txt](./tutorial/Examples/sample-03.txt)
+- [sample-04.txt](./tutorial/Examples/sample-04.txt)
+- [sample-05.txt](./tutorial/Examples/sample-05.txt)
 
 For your own project, you will need to proofread the entire dictionary so plan accordingly.
 
