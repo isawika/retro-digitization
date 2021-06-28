@@ -29,7 +29,7 @@ The converter tool performs other enhancements that are not shown in this exampl
 
 You will need to write a program to do the actual text-to-XML conversion. 
 
-> Note: &nbsp;If you skipped the __Fine-Tuning__ section of this tutorial, you can still see how the converter works by running it against one the Exammple proofread pages we provided, as shown below.
+> Note: &nbsp;If you skipped the __Fine-Tuning__ section of this tutorial, you can still see how the converter works by running it against one the Example proofread pages we provided, as shown below.
 
 ```
 $ python3 ../conklin2xml.py Examples/sample-02.txt > sample-02.xml
@@ -39,7 +39,7 @@ $ python3 ../conklin2xml.py Examples/sample-02.txt > sample-02.xml
 
 ### 4.3 Make the remaining enhancements manually
 
-Similar to the __Fine-Tuning__ step, we aimed for "good enough" performance for the XML converter, leaving it to proofreaders to post-edit the XML pages. The post-edits were done using the [Lexonomy](https://www.lexonomy.eu/) dictionary writing and publishing platform. We hosted it on our own cloud-environment but you can try it out by [installing Lexomony](https://github.com/elexis-eu/lexonomy/blob/master/INSTALL.md) on your local computer.
+Similar to the __Fine-Tuning__ step, we aimed for "good enough" performance for the XML converter, leaving it to proofreaders to post-edit the XML pages. We did the post-edits using the [Lexonomy](https://www.lexonomy.eu/) dictionary writing and publishing platform. We hosted it on our own cloud-environment but you can try it out by [installing Lexomony](https://github.com/elexis-eu/lexonomy/blob/master/INSTALL.md) on your local computer.
 
 The most common errors are lexical items that should be split off as separate XML elements.
 
