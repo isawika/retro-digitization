@@ -1,0 +1,214 @@
+{
+  "root": "dictionary",
+  "elements": {
+    "headword": {
+      "filling": "txt",
+      "children": [],
+      "attributes": {
+        "xml:lang": {
+          "optionality": "optional",
+          "filling": "txt"
+        }
+      }
+    },
+    "sense": {
+      "filling": "chd",
+      "children": [
+        {
+          "name": "index",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        },
+        {
+          "name": "flag",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        },
+        {
+          "name": "def",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        },
+        {
+          "name": "example",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        },
+        {
+          "name": "synonym",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        },
+        {
+          "name": "origin",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        },
+        {
+          "name": "cf",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        },
+        {
+          "name": "see",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        },
+        {
+          "name": "usage",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        },
+        {
+          "name": "note",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        }
+      ],
+      "attributes": {}
+    },
+    "index": {
+      "filling": "txt",
+      "children": [],
+      "attributes": {}
+    },
+    "flag": {
+      "filling": "txt",
+      "children": [],
+      "attributes": {}
+    },
+    "synonym": {
+      "filling": "txt",
+      "children": [],
+      "attributes": {}
+    },
+    "origin": {
+      "filling": "txt",
+      "children": [],
+      "attributes": {}
+    },
+    "cf": {
+      "filling": "txt",
+      "children": [],
+      "attributes": {}
+    },
+    "see": {
+      "filling": "txt",
+      "children": [],
+      "attributes": {}
+    },
+    "usage": {
+      "filling": "chd",
+      "children": [
+        {
+          "name": "pronounce",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        },
+        {
+          "name": "example",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        }
+      ],
+      "attributes": {}
+    },
+    "dictionary": {
+      "filling": "chd",
+      "values": [],
+      "children": [
+        {
+          "name": "entry",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        }
+      ],
+      "attributes": {}
+    },
+    "word-entry": {
+      "filling": "chd",
+      "children": [
+        {
+          "name": "headword",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        },
+        {
+          "name": "pronounce",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        },
+        {
+          "name": "sense",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        }
+      ],
+      "attributes": {}
+    },
+    "entry": {
+      "filling": "chd",
+      "children": [
+        {
+          "name": "page",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        },
+        {
+          "name": "word-entry",
+          "min": 0,
+          "max": 0,
+          "rec": 0
+        }
+      ],
+      "attributes": {}
+    },
+    "page": {
+      "filling": "txt",
+      "children": [],
+      "attributes": {}
+    },
+    "note": {
+      "filling": "txt",
+      "children": [],
+      "attributes": {}
+    },
+    "def": {
+      "filling": "inl",
+      "children": [],
+      "attributes": {}
+    },
+    "pronounce": {
+      "filling": "txt",
+      "children": [],
+      "attributes": {
+        "xml:lang": {
+          "optionality": "optional",
+          "filling": "txt"
+        }
+      }
+    },
+    "example": {
+      "filling": "txt",
+      "children": [],
+      "attributes": {}
+    }
+  }
+}

@@ -1,0 +1,10 @@
+div.myEntry {font-family: serif; font-size: 1.25em; }
+div.myWordEntry {margin-top: 30px;}
+div.myEntry span.myHeadword {font-weight: bold; }
+div.myEntry span.myPronounce {margin-left: 20px; color: blue; }
+div.myEntry span.myFlag {margin-left: 20px; color: #993300; font-weight: bold; }
+div.myEntry span.myDefinition {margin-left: 20px; }
+div.indented {margin-left: 100px;  }
+span.myOrigin, span.mySynonym, span.myCf, 
+span.mySeeAlso, span.myNote, span.myUsage {margin-right: 15px; font-weight: bold; color: #003d99; font-size: 0.9em;}
+span.myUsagePronounce {font-style: italic; color: black; margin-right: 20px;}
